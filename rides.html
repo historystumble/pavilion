@@ -1,361 +1,530 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Myrtle Beach Pavilion Amusement Park Rides and Attractions</title>
-    <meta name="keywords" content="myrtle beach, myrtle beach pavilion, Pavilion Amusement Park,Fun Parks, Myrtle Beach Pavilion, Myrtle Waves, Nascar Speedpark, South Beach Adventure, myrtle beach attractions, south carolina vacations, Carolina Opry, Dixie Stampede" />
+    <meta
+      name="keywords"
+      content="myrtle beach, myrtle beach pavilion, Pavilion Amusement Park,Fun Parks, Myrtle Beach Pavilion, Myrtle Waves, Nascar Speedpark, South Beach Adventure, myrtle beach attractions, south carolina vacations, Carolina Opry, Dixie Stampede"
+    />
     <meta name="robots" content="all" />
-    <meta name="title" content="Myrtle Beach Pavilion Amusement Park Season Pass Information" />
-    <meta name="description" content="THE MYRTLE BEACH PAVILION has been entertaining generations of families for more than fifty years. An 11-acre playground by the sea, The Myrtle Beach Pavilion features more than 40 spectacular rides ranging from a large variety of kiddie rides to the Hurricane Category 5, the biggest, baddest roller coaster in South Carolina." />
+    <meta
+      name="title"
+      content="Myrtle Beach Pavilion Amusement Park Season Pass Information"
+    />
+    <meta
+      name="description"
+      content="THE MYRTLE BEACH PAVILION has been entertaining generations of families for more than fifty years. An 11-acre playground by the sea, The Myrtle Beach Pavilion features more than 40 spectacular rides ranging from a large variety of kiddie rides to the Hurricane Category 5, the biggest, baddest roller coaster in South Carolina."
+    />
     <meta name="category" content="Regional" />
     <meta name="rating" content="Safe For Kids" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
     <!-- Popup functionality for ride descriptions -->
     <script language="JavaScript">
-        <!-- Begin
-        //   ##############  SIMPLE  BROWSER SNIFFER
-        if (document.layers) {
-            navigator.family = "nn4";
-        }
-        if (document.all) {
-            navigator.family = "ie4";
-        }
-        if (window.navigator.userAgent.toLowerCase().match("gecko")) {
-            navigator.family = "gecko";
-        }
+      <!-- Begin
+      //   ##############  SIMPLE  BROWSER SNIFFER
+      if (document.layers) {
+        navigator.family = "nn4";
+      }
+      if (document.all) {
+        navigator.family = "ie4";
+      }
+      if (window.navigator.userAgent.toLowerCase().match("gecko")) {
+        navigator.family = "gecko";
+      }
 
-        //  #########  popup text
-        descarray = new Array(
-            "<b>The Hurricane Category 5</b><br><li>South Carolina's biggest and baddest wooden roller coaster<li>Reaching heights of 110 feet and the force of 3 g's.",
-            "<b>The Hydro-Surge</b> <br> A whitewater raft ride with 1,124 feet of winding, rushing rapids.",
-            "<b>The Mad Mouse</b><br>Steel roller coaster gives its riders a thrill of falling off the edge <br>of the tracks while dangling them 50-feet in the air",
-            "<b>Calypso</b><br>High-speed circular rotation vehicle travels counter clockwise at 11 RPM while its gondola arms travel clockwise at 22 RPM.",
-            "<b>Caterpillar</b><br>At mid-ride, this fast, circular ride slows to a stop and travels backwards while covered by a canvas, leaving the rider in the dark",
-            "<b>Enterprise</b><br><li>A landmark for the Pavilion since 1979<li>Rotates at a high rate of speed and the centrifugal force causes the rider to be fixed to the seat",
-            "<b>Haunted House</b><br>Twelve two-seater cars take rides through Myrtle Beach's spookiest hotel.",
-            "<b>Carousel</b><br>A family favortie filled with exotic moving and stationary circus animals",
-            "<b>Tilt-A-Whirl</b><br>Traditional circular ride where tilt cars and platform both spin",
-            "<b>Super Skooter</b><br>A traditional favorite, these cars will allow you to bump as much as you want."
-        );
+      //  #########  popup text
+      descarray = new Array(
+        "<b>The Hurricane Category 5</b><br><li>South Carolina's biggest and baddest wooden roller coaster<li>Reaching heights of 110 feet and the force of 3 g's.",
+        "<b>The Hydro-Surge</b> <br> A whitewater raft ride with 1,124 feet of winding, rushing rapids.",
+        "<b>The Mad Mouse</b><br>Steel roller coaster gives its riders a thrill of falling off the edge <br>of the tracks while dangling them 50-feet in the air",
+        "<b>Calypso</b><br>High-speed circular rotation vehicle travels counter clockwise at 11 RPM while its gondola arms travel clockwise at 22 RPM.",
+        "<b>Caterpillar</b><br>At mid-ride, this fast, circular ride slows to a stop and travels backwards while covered by a canvas, leaving the rider in the dark",
+        "<b>Enterprise</b><br><li>A landmark for the Pavilion since 1979<li>Rotates at a high rate of speed and the centrifugal force causes the rider to be fixed to the seat",
+        "<b>Haunted House</b><br>Twelve two-seater cars take rides through Myrtle Beach's spookiest hotel.",
+        "<b>Carousel</b><br>A family favortie filled with exotic moving and stationary circus animals",
+        "<b>Tilt-A-Whirl</b><br>Traditional circular ride where tilt cars and platform both spin",
+        "<b>Super Skooter</b><br>A traditional favorite, these cars will allow you to bump as much as you want."
+      );
 
-        overdiv = "0";
-        
-        //  #########  CREATES POP UP BOXES
-        function popLayer(a) {
-            if (!descarray[a]) {
-                descarray[a] = "<font color=red>This popup (#" + a + ") isn't setup correctly - needs description</font>";
-            }
-            if (navigator.family == "gecko") {
-                pad = "0";
-                bord = "1 bordercolor=black";
-            } else {
-                pad = "1";
-                bord = "0";
-            }
-            desc = "<table cellspacing=0 cellpadding=" + pad + " border=" + bord + "  bgcolor=000000><tr><td>\n" +
-                   "<table cellspacing=0 cellpadding=3 border=0 width=100%><tr><td bgcolor=ffffff><center><font size=-1>\n" +
-                   descarray[a] + "\n</td></tr></table>\n" +
-                   "</td></tr></table>";
-            
-            if (navigator.family == "nn4") {
-                document.object1.document.write(desc);
-                document.object1.document.close();
-                document.object1.left = x + 15;
-                document.object1.top = y - 5;
-            } else if (navigator.family == "ie4") {
-                object1.innerHTML = desc;
-                object1.style.pixelLeft = x + 15;
-                object1.style.pixelTop = y - 5;
-            } else if (navigator.family == "gecko") {
-                document.getElementById("object1").innerHTML = desc;
-                document.getElementById("object1").style.left = x + 15;
-                document.getElementById("object1").style.top = y - 5;
-            }
-        }
-        
-        function hideLayer() {
-            if (overdiv == "0") {
-                if (navigator.family == "nn4") {
-                    eval((document.object1.top = "-500"));
-                } else if (navigator.family == "ie4") {
-                    object1.innerHTML = "";
-                } else if (navigator.family == "gecko") {
-                    document.getElementById("object1").style.top = "-500";
-                }
-            }
-        }
+      overdiv = "0";
 
-        //  ########  TRACKS MOUSE POSITION FOR POPUP PLACEMENT
-        var isNav = (navigator.appName.indexOf("Netscape") != -1);
-        function handlerMM(e) {
-            x = (isNav) ? e.pageX : event.clientX + document.body.scrollLeft;
-            y = (isNav) ? e.pageY : event.clientY + document.body.scrollTop;
+      //  #########  CREATES POP UP BOXES
+      function popLayer(a) {
+        if (!descarray[a]) {
+          descarray[a] =
+            "<font color=red>This popup (#" +
+            a +
+            ") isn't setup correctly - needs description</font>";
         }
-        if (isNav) {
-            document.captureEvents(Event.MOUSEMOVE);
+        if (navigator.family == "gecko") {
+          pad = "0";
+          bord = "1 bordercolor=black";
+        } else {
+          pad = "1";
+          bord = "0";
         }
-        document.onmousemove = handlerMM;
-        //  End -->
+        desc =
+          "<table cellspacing=0 cellpadding=" +
+          pad +
+          " border=" +
+          bord +
+          "  bgcolor=000000><tr><td>\n" +
+          "<table cellspacing=0 cellpadding=3 border=0 width=100%><tr><td bgcolor=ffffff><center><font size=-1>\n" +
+          descarray[a] +
+          "\n</td></tr></table>\n" +
+          "</td></tr></table>";
+
+        if (navigator.family == "nn4") {
+          document.object1.document.write(desc);
+          document.object1.document.close();
+          document.object1.left = x + 15;
+          document.object1.top = y - 5;
+        } else if (navigator.family == "ie4") {
+          object1.innerHTML = desc;
+          object1.style.pixelLeft = x + 15;
+          object1.style.pixelTop = y - 5;
+        } else if (navigator.family == "gecko") {
+          document.getElementById("object1").innerHTML = desc;
+          document.getElementById("object1").style.left = x + 15;
+          document.getElementById("object1").style.top = y - 5;
+        }
+      }
+
+      function hideLayer() {
+        if (overdiv == "0") {
+          if (navigator.family == "nn4") {
+            eval((document.object1.top = "-500"));
+          } else if (navigator.family == "ie4") {
+            object1.innerHTML = "";
+          } else if (navigator.family == "gecko") {
+            document.getElementById("object1").style.top = "-500";
+          }
+        }
+      }
+
+      //  ########  TRACKS MOUSE POSITION FOR POPUP PLACEMENT
+      var isNav = navigator.appName.indexOf("Netscape") != -1;
+      function handlerMM(e) {
+        x = isNav ? e.pageX : event.clientX + document.body.scrollLeft;
+        y = isNav ? e.pageY : event.clientY + document.body.scrollTop;
+      }
+      if (isNav) {
+        document.captureEvents(Event.MOUSEMOVE);
+      }
+      document.onmousemove = handlerMM;
+      //  End -->
     </script>
-</head>
-<body background="images/back.jpg" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
-
-    <div id="object1" style="position: absolute; background-color: rgb(255, 255, 221); color: black; border-color: black; border-width: 20px; left: 486px; top: -500px; z-index: 1;"
-         onmouseover="overdiv=1;" onmouseout="overdiv=0; setTimeout('hideLayer()',1000)">
-    </div>
+  </head>
+  <body
+    background="images/back.jpg"
+    topmargin="0"
+    leftmargin="0"
+    marginheight="0"
+    marginwidth="0"
+  >
+    <div
+      id="object1"
+      style="
+        position: absolute;
+        background-color: rgb(255, 255, 221);
+        color: black;
+        border-color: black;
+        border-width: 20px;
+        left: 486px;
+        top: -500px;
+        z-index: 1;
+      "
+      onmouseover="overdiv=1;"
+      onmouseout="overdiv=0; setTimeout('hideLayer()',1000)"
+    ></div>
 
     <table width="744" border="0" cellpadding="0" cellspacing="0">
-        <tbody>
-            <tr>
-                <td colspan="2">
-                    <a href="index.html"><img src="images/pavilion_01.jpg" width="190" height="87" alt="Myrtle Beach Pavilion- Family Fun" border="0" /></a>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <table width="744" border="0" cellpadding="0" cellspacing="0">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="rides.html"><img src="images/navigation_01.jpg" width="154" height="66" alt="Rides and Attractions" border="0" /></a>
-                                </td>
-                                <td>
-                                    <a href="parkinfo.html"><img src="images/navigation_02.jpg" width="73" height="66" alt="Park Information" border="0" /></a>
-                                </td>
-                                <td>
-                                    <a href="#"><img src="images/navigation_03.jpg" width="118" height="66" alt="Special Events" border="0" /></a>
-                                </td>
-                                <td>
-                                    <a href="groupsales.html"><img src="images/navigation_04.jpg" width="99" height="66" alt="Group Sales" border="0" /></a>
-                                </td>
-                                <td>
-                                    <a href="photogallery.html"><img src="images/navigation_05.jpg" width="118" height="66" alt="Photogallery" border="0" /></a>
-                                </td>
-                                <td>
-                                    <a href="kidsonly.html"><img src="images/navigation_06.jpg" width="86" height="66" alt="Kids Only" border="0" /></a>
-                                </td>
-                                <td>
-                                    <a href="seasonpasses.html"><img src="images/navigation_07.jpg" width="96" height="66" alt="Season Passes" border="0" /></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td valign="top" width="195" style="background-color: #ffff99;">
-                    <table width="95%">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div align="center">
-                                        <p>
-                                            <br />
-                                            <font color="black" face="Arial" size="-1">
-                                                <b>Seaside Clown</b><br />
-                                                Seaside Clown Cavalcade performing skits daily and
-                                                <br />
-                                                2 shows nightly at 7pm and 9pm on the park stage.<br />
-                                                <a href="clowns.html">Click here for details!</a>
-                                            </font>
-                                        </p>
-                                        <p>
-                                            <font color="black" face="Arial" size="-1">
-                                                <b>The Attic</b><br />
-                                                Myrtle Beach's ONLY UNDER-21 NIGHTCLUB!<br />
-                                                <a href="attic.html">Click here for details!</a>
-                                            </font>
-                                        </p>
-                                        <p>
-                                            <font color="black" face="Arial" size="-1">
-                                                <b>4-D Adventure Theater </b><br />
-                                                The action literally jumps off the screen and guests
-                                                not only feel they are part of the movie, but they can
-                                                feel the heat of a dragon's breath, the spray of a
-                                                waterfall or the tickle of a spider running across
-                                                their arms. <br />
-                                            </font>
-                                        </p>
-                                        <p>
-                                            <font color="black" face="arial" size="-1">
-                                                <b>2nd Day 1/2 Price</b><br />
-                                                <a href="parkinfo.html">Click here for Details</a>
-                                            </font>
-                                        </p>
-                                        <p>
-                                            <font color="black" face="arial" size="-1">
-                                                <b>FREE Frequent Fun Card</b><br />
-                                                <a href="ffun.html">Click here for Details</a>
-                                            </font>
-                                        </p>
-                                        <p>
-                                            <font color="black" face="arial" size="-1">
-                                                <b>Myrtle Beach Trips</b><br />
-                                                <a href="mbt.html">Click here for Details</a>
-                                            </font>
-                                        </p>
-                                        <p>
-                                            <font color="black" face="Arial" size="-1">
-                                                The Pavilion hosts exciting entertainment throughout
-                                                the summer including beach bands, funky acts,
-                                                jugglers, clowns and more.
-                                            </font>
-                                        </p>
-                                        <p>&nbsp;</p>
-                                        <p></p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-                <td bgcolor="#3398CC" width="549" valign="top">
+      <tbody>
+        <tr>
+          <td colspan="2">
+            <a href="index.html"
+              ><img
+                src="images/pavilion_01.jpg"
+                width="190"
+                height="87"
+                alt="Myrtle Beach Pavilion- Family Fun"
+                border="0"
+            /></a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <table width="744" border="0" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="rides.html"
+                      ><img
+                        src="images/navigation_01.jpg"
+                        width="154"
+                        height="66"
+                        alt="Rides and Attractions"
+                        border="0"
+                    /></a>
+                  </td>
+                  <td>
+                    <a href="parkinfo.html"
+                      ><img
+                        src="images/navigation_02.jpg"
+                        width="73"
+                        height="66"
+                        alt="Park Information"
+                        border="0"
+                    /></a>
+                  </td>
+                  <td>
+                    <a href="#"
+                      ><img
+                        src="images/navigation_03.jpg"
+                        width="118"
+                        height="66"
+                        alt="Special Events"
+                        border="0"
+                    /></a>
+                  </td>
+                  <td>
+                    <a href="groupsales.html"
+                      ><img
+                        src="images/navigation_04.jpg"
+                        width="99"
+                        height="66"
+                        alt="Group Sales"
+                        border="0"
+                    /></a>
+                  </td>
+                  <td>
+                    <a href="photogallery.html"
+                      ><img
+                        src="images/navigation_05.jpg"
+                        width="118"
+                        height="66"
+                        alt="Photogallery"
+                        border="0"
+                    /></a>
+                  </td>
+                  <td>
+                    <a href="kidsonly.html"
+                      ><img
+                        src="images/navigation_06.jpg"
+                        width="86"
+                        height="66"
+                        alt="Kids Only"
+                        border="0"
+                    /></a>
+                  </td>
+                  <td>
+                    <a href="seasonpasses.html"
+                      ><img
+                        src="images/navigation_07.jpg"
+                        width="96"
+                        height="66"
+                        alt="Season Passes"
+                        border="0"
+                    /></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="195" style="background-color: #ffff99">
+            <table width="95%">
+              <tbody>
+                <tr>
+                  <td>
                     <div align="center">
-                        <h2><font color="white">Rides and Attractions</font></h2>
+                      <p>
                         <br />
                         <font color="black" face="Arial" size="-1">
-                            Click below for information on our Major Attractions<br />
-                            <!-- For now, showing a simplified ride map using available image -->
-                            <img src="images/map.png" alt="Park Map" style="max-width: 500px;" />
+                          <b>Seaside Clown</b><br />
+                          Seaside Clown Cavalcade performing skits daily and
+                          <br />
+                          2 shows nightly at 7pm and 9pm on the park stage.<br />
+                          <a href="clowns.html">Click here for details!</a>
                         </font>
-                    </div>
-                    <p>&nbsp;</p>
-                    <font color="black" face="Arial" size="+1">
-                        <u><b>For the Kids</b></u> </font
-                    ><br />
-                    <font color="black" face="Arial" size="-1">
-                        The Pavilion offers a wide selection of kiddie rides for the
-                        smaller customer (not all rides listed).
-                    </font>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <ul>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Balloon Ride</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Boats</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Crazy Fire Trucks</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Dune Buggies</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Frog Hopper</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Kiddie Speedway</font>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Little Eagle (steel roller coaster)</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Motorcycles</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Pirate Ship</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Rio Grand Train</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Tea Cups</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Tubs O'Fun</font>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-                    <font color="black" face="Arial" size="+1">
-                        <u><b>Other Features</b></u> </font
-                    ><br />
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td valign="top">
-                                    <ul>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Ample Parking*</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Go Karts*</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Indoor or outdoor catering areas</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Oceanfront boardwalk and arcade</font>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Over 25 skill games*</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">Shops and Snack Concessions</font>
-                                        </li>
-                                        <li>
-                                            <font color="black" face="Arial" size="-1">The Attic - under 21 nightclub*</font>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <font color="black" face="Arial" size="-1">*Requires Additional Fee</font>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-                    <div align="center">
-                        <font color="000000" face="Arial" size="-1">
-                            <a href="index.html"><font color="000000" face="Arial" size="-1">Home</font></a>
-                            |
-                            <a href="rides.html"><font color="000000" face="Arial" size="-1">Rides &amp; Attractions</font></a>
-                            |
-                            <a href="parkinfo.html"><font color="000000" face="Arial" size="-1">Park Info</font></a>
-                            |
-                            <a href="specialevents.html"><font color="000000" face="Arial" size="-1">Special Events</font></a>
-                            |
-                            <a href="groupsales.html"><font color="000000" face="Arial" size="-1">Group Sales</font></a>
-                            |
-                            <a href="photogallery.html"><font color="000000" face="Arial" size="-1">Photogallery</font></a><br />
-                            <a href="kidsonly.html"><font color="000000" face="Arial" size="-1">Kids Only</font></a>
-                            |
-                            <a href="seasonpass.html"><font color="000000" face="Arial" size="-1">Season Pass</font></a>
-                            |
-                            <a href="attic.html"><font color="000000" face="Arial" size="-1">The Attic</font></a>
-                            |
-                            <a href="faq.html"><font color="000000" face="Arial" size="-1">FAQ's</font></a>
+                      </p>
+                      <p>
+                        <font color="black" face="Arial" size="-1">
+                          <b>The Attic</b><br />
+                          Myrtle Beach's ONLY UNDER-21 NIGHTCLUB!<br />
+                          <a href="attic.html">Click here for details!</a>
                         </font>
-                        <p>
-                            <font color="000000" face="Arial" size="-1">
-                                Ocean Blvd 8th-9th Ave N, Myrtle Beach, SC <br />
-                                843-913-5200 |
-                                <a href="contact.html">Contact Us</a>
-                            </font>
-                        </p>
+                      </p>
+                      <p>
+                        <font color="black" face="Arial" size="-1">
+                          <b>4-D Adventure Theater </b><br />
+                          The action literally jumps off the screen and guests
+                          not only feel they are part of the movie, but they can
+                          feel the heat of a dragon's breath, the spray of a
+                          waterfall or the tickle of a spider running across
+                          their arms. <br />
+                        </font>
+                      </p>
+                      <p>
+                        <font color="black" face="arial" size="-1">
+                          <b>2nd Day 1/2 Price</b><br />
+                          <a href="parkinfo.html">Click here for Details</a>
+                        </font>
+                      </p>
+                      <p>
+                        <font color="black" face="arial" size="-1">
+                          <b>FREE Frequent Fun Card</b><br />
+                          <a href="ffun.html">Click here for Details</a>
+                        </font>
+                      </p>
+                      <p>
+                        <font color="black" face="arial" size="-1">
+                          <b>Myrtle Beach Trips</b><br />
+                          <a href="mbt.html">Click here for Details</a>
+                        </font>
+                      </p>
+                      <p>
+                        <font color="black" face="Arial" size="-1">
+                          The Pavilion hosts exciting entertainment throughout
+                          the summer including beach bands, funky acts,
+                          jugglers, clowns and more.
+                        </font>
+                      </p>
+                      <p>&nbsp;</p>
+                      <p></p>
                     </div>
-                </td>
-            </tr>
-        </tbody>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td bgcolor="#3398CC" width="549" valign="top">
+            <div align="center">
+              <h2><font color="white">Rides and Attractions</font></h2>
+              <br />
+              <font color="black" face="Arial" size="-1">
+                Click below for information on our Major Attractions<br />
+                <!-- For now, showing a simplified ride map using available image -->
+                <img
+                  src="images/map.png"
+                  alt="Park Map"
+                  style="max-width: 500px"
+                />
+              </font>
+            </div>
+            <p>&nbsp;</p>
+            <font color="black" face="Arial" size="+1">
+              <u><b>For the Kids</b></u> </font
+            ><br />
+            <font color="black" face="Arial" size="-1">
+              The Pavilion offers a wide selection of kiddie rides for the
+              smaller customer (not all rides listed).
+            </font>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Balloon Ride</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1">Boats</font>
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Crazy Fire Trucks</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Dune Buggies</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Frog Hopper</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Kiddie Speedway</font
+                        >
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Little Eagle (steel roller coaster)</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Motorcycles</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Pirate Ship</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Rio Grand Train</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Tea Cups</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Tubs O'Fun</font
+                        >
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <font color="black" face="Arial" size="+1">
+              <u><b>Other Features</b></u> </font
+            ><br />
+            <table>
+              <tbody>
+                <tr>
+                  <td valign="top">
+                    <ul>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Ample Parking*</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Go Karts*</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Indoor or outdoor catering areas</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Oceanfront boardwalk and arcade</font
+                        >
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Over 25 skill games*</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >Shops and Snack Concessions</font
+                        >
+                      </li>
+                      <li>
+                        <font color="black" face="Arial" size="-1"
+                          >The Attic - under 21 nightclub*</font
+                        >
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <font color="black" face="Arial" size="-1"
+                      >*Requires Additional Fee</font
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <div align="center">
+              <font color="000000" face="Arial" size="-1">
+                <a href="index.html"
+                  ><font color="000000" face="Arial" size="-1">Home</font></a
+                >
+                |
+                <a href="rides.html"
+                  ><font color="000000" face="Arial" size="-1"
+                    >Rides &amp; Attractions</font
+                  ></a
+                >
+                |
+                <a href="parkinfo.html"
+                  ><font color="000000" face="Arial" size="-1"
+                    >Park Info</font
+                  ></a
+                >
+                |
+                <a href="specialevents.html"
+                  ><font color="000000" face="Arial" size="-1"
+                    >Special Events</font
+                  ></a
+                >
+                |
+                <a href="groupsales.html"
+                  ><font color="000000" face="Arial" size="-1"
+                    >Group Sales</font
+                  ></a
+                >
+                |
+                <a href="photogallery.html"
+                  ><font color="000000" face="Arial" size="-1"
+                    >Photogallery</font
+                  ></a
+                ><br />
+                <a href="kidsonly.html"
+                  ><font color="000000" face="Arial" size="-1"
+                    >Kids Only</font
+                  ></a
+                >
+                |
+                <a href="seasonpass.html"
+                  ><font color="000000" face="Arial" size="-1"
+                    >Season Pass</font
+                  ></a
+                >
+                |
+                <a href="attic.html"
+                  ><font color="000000" face="Arial" size="-1"
+                    >The Attic</font
+                  ></a
+                >
+                |
+                <a href="faq.html"
+                  ><font color="000000" face="Arial" size="-1">FAQ's</font></a
+                >
+              </font>
+              <p>
+                <font color="000000" face="Arial" size="-1">
+                  Ocean Blvd 8th-9th Ave N, Myrtle Beach, SC <br />
+                  843-913-5200 |
+                  <a href="contact.html">Contact Us</a>
+                </font>
+              </p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
     </table>
 
     <!-- End ImageReady Slices -->
-</body>
+  </body>
 </html>
