@@ -141,4 +141,4 @@ vite.config.ts.timestamp-*
 .DS_Store
 
 # Original Wayback Machine assets (copied to images/)
-assets/
+# assets/
